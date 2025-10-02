@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gorra Verde</title>
+        <!--Logo pestaña-->
+        <link rel="icon" href="../imgs/icono.jpeg" type="image/x-icon">
+        <!--Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap" rel="stylesheet">
+
+
+        <!--Bootstrap Css-->
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous"
+        />
+        <!-- Bootstrap Icons-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!--Css-->
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+
+        <div class="top-banner">
+            <span class="top-banner-text"> 12 cuotas sin interés | Envío gratis a partir de 80.000$ | </span>
+            <span class="top-banner-text"> 12 cuotas sin interés | Envío gratis a partir de 80.000$ | </span>
+            <span class="top-banner-text"> 12 cuotas sin interés | Envío gratis a partir de 80.000$ | </span>
+            <span class="top-banner-text"> 12 cuotas sin interés | Envío gratis a partir de 80.000$ | </span>
+          </div>
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html">
+                <img src="../imgs/logo_goat.png" alt="" width="45" height="40">
+              </a>
+              <a href="../index.html">
+                <h1 class="text-center">Goated</h1>
+              </a>
+              <div class="d-flex justify-content-end">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <a href="../cart.html" class="carritoimg d-lg-none">
+                  <i class="bi bi-cart fs-4"></i>
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 justify-content-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../aboutsUs.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../suscribite.html">Suscribite</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../contactanos.html">Contactanos</a>
+                  </li>
+                </ul>
+                <form class="d-flex" id="search-form" action="../productos.html" method="GET">
+                  <input type="text" id="search-input" name="search" placeholder="Buscar">
+                  <button class="btn" type="submit" id="search-btn"><i class="bi bi-search fs-5"></i></button>
+                </form>
+                <a href="../cart.html" class="carritoimg d-none d-lg-block">
+                  <i class="bi bi-cart fs-4"></i>
+                </a>
+              </div>
+            </div>
+          </nav>
+
+        <div class="container container-productos">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <img src="../imgs/gorra1.png" alt="Gorra Verde" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="row">
+                        <div class="col-12 my-4">
+                            <h2 id="name">Gorra Verde</h2>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-dark fs-1 my-auto" id="precio">$30.000</p>
+                        </div>
+                        <div class="col-12">
+                            <p class="text-dark fs-2 my-auto" id="precio-desc">$27.000 con transferencia</p>
+                        </div>
+                        <div class="col-12">
+                          <p class="text-dark fs-6 my-auto">12 cuotas sin interés de $2.500</p>
+                        </div>
+                        <div class="col-12" style="height: 20px"></div>
+                        <div class="col-12">
+                            <label class="fs-5" for="cant">Cantidad:</label>
+                            <select name="cantidad" id="cant">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label class="fs-5" for="talle">Talle:</label>
+                            <select name="talle" id="talle">
+                                <option value="s">S</option>
+                                <option value="m">M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        </div>
+                        <div class="col-12" style="height: 20px"></div>
+                        <div class="col-12">
+                            <p class="text-dark fs-5"><i class="bi bi-truck"></i> Envío gratis superando los $80.000</p>
+                        </div>
+                        <div class="col-1 my-1">
+                            <i class="bi bi-shield-check fs-4"></i>
+                        </div>
+                        <div class="col-11 my-1">
+                            <p class="text-dark fs-6 my-0 fw-bold">Compra protegida</p>
+                            <p class="text-dark fs-6 my-0">Tus datos cuidados durante toda la compra.</p>
+                        </div>
+                        <div class="col-1 my-1">
+                            <i class="bi bi-arrow-repeat fs-4"></i>
+                        </div>
+                        <div class="col-11 my-1">
+                            <p class="text-dark fs-6 my-0 fw-bold">Cambios y devoluciones</p>
+                            <p class="text-dark fs-6 my-0">Si no te gusta el producto, podés cambiarlo por otro o devolverlo.</p>
+                        </div>
+
+                        <div class="col-12 my-2">
+                            <button class="btn btn-primary" id="add-to-cart">Agregar al carrito</button>
+                        </div>
+                        <div class="toast-container position-fixed top-50 end-0 p-3">
+                          <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                            <div class="toast-header">
+                              <i class="bi bi-bag-check me-3"></i>
+                              <strong class="me-auto">Goated</strong>
+                              <small>Ahora</small>
+                              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                            </div>
+                            <div class="toast-body">
+                              Producto agregado al carrito con éxito
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!--Lookbook-->
+      <h1 class="m-3">Completá tu look</h1>
+      <div class="lookbook-wrapper">
+        <div class="container-lookbook">
+          <div class="lookbook">
+            <img src="../imgs/gorra1-small.png" alt="Gorra">
+            <a href="prod4.html"><img src="../imgs/remera1-small.png" alt="Remera"></a>
+            <a href="prod1.html"><img src="../imgs/buzo1-small.png" alt="buzo"></a>
+            <a href="prod12.html"><img src="../imgs/media3.png" alt="Media"></a> 
+          </div>
+        </div>
+        <div class="container-lookbook">
+          <div class="lookbook">
+            <img src="../imgs/gorra1-small.png" alt="Gorra">
+            <a href="prod5.html"><img src="../imgs/remera2-small.png" alt="Remera"></a>
+            <a href="prod2.html"><img src="../imgs/buzo2-small.png" alt="buzo"></a>
+            <a href="prod11.html"><img src="../imgs/media2-small.png" alt="Media"></a>
+          </div>
+        </div>
+        <div class="container-lookbook">
+          <div class="lookbook">
+            <img src="../imgs/gorra1-small.png" alt="Gorra">
+            <a href="prod6.html"><img src="../imgs/remera3-small.png" alt="Remera"></a>
+            <a href="prod3.html"><img src="../imgs/buzo3-small.png" alt="buzo"></a>
+            <a href="prod10.html"><img src="../imgs/media1-small.png" alt="Media"></a>
+          </div>
+        </div>
+       </div>
+
+
+
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"
+        ></script>
+        <script src="../cart.js"></script>
+        <!--Footer-->
+        <footer class="bg-light text-center text-lg-start mb-4">   
+          <div class="container p-1" id="footer-div">
+            <div class="row">
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <a class="navbar-brand d-flex align-items-center justify-content-center justify-content-lg-start" href=".//index.html">
+                        <img src="../imgs/logo_goat.png" alt="" width="45" height="40" class="me-2">
+                        <h1>Goated</h1>
+                </a>
+                  <p class="location ">
+                      Ubicación: Lima 757, CABA, Argentina
+                  </p>
+                  <a href="https://www.instagram.com/" target="_blank" class="text-decoration-none text-dark"><i class="bi bi-instagram"></i></a>   
+                  <a href="https://x.com/" class="text-decoration-none text-dark" target="_blank"><i class="bi bi-twitter-x"></i></a> 
+                  <a href="https://www.linkedin.com/" class="text-decoration-none text-dark" target="_blank"><i class="bi bi-linkedin"></i></a>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text">Ayuda</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-dark">Lucas Castro</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">Diego Morate Leiva</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">Bruno Cacciola</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">Alejandro Garrido</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">Mateo Carboni</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text">Acerca de</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-dark">Diseño y Desarrollo Web</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">2do Cuatrimestre</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">2024</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">UADE</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text">Novedades Goat</h5>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="#!" class="text-dark">ENVÍO GRATIS EN TU PRIMERA COMPRA </a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">COLECCIÓN VERANO 2024</a>
+                  </li>
+                  <li>
+                    <a href="#!" class="text-dark">NUEVO LOCAL EN LIMA 757, CABA</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-banner text-center p-1">
+            <a class="copy">© 2024 Goated Inc Copyright</a><p class="d-inline copy-bar"> | </p>
+            <a class="copy">Política de privacidad</a><p class="d-inline copy-bar"> | </p>
+            <a class="copy">Términos y condiciones </a>
+          </div>
+        </footer>
+          <script>
+            const toastTrigger = document.getElementById('add-to-cart')
+            const toastLiveExample = document.getElementById('liveToast')
+
+            if (toastTrigger) {
+            const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+            toastTrigger.addEventListener('click', () => {
+                toastBootstrap.show()
+            })
+        }
+        </script>
+    </body>
+</html>
