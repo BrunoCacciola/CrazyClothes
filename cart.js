@@ -1,40 +1,55 @@
 document.addEventListener('DOMContentLoaded', function () {
     const cartButton = document.querySelector('.btn-primary');
-    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-    cartButton.addEventListener('click', function () {
-        // Obtener información del producto
-        const quantity = document.querySelector('#cant').value;
-        const size = document.querySelector('#talle').value;
-        const priceElement = document.querySelector('#precio');
-        const nameElement = document.querySelector('#name');
-        const imageElement = document.querySelector('img.img-fluid'); // Obtener la imagen del producto
+    if (cartButton) {
+        cartButton.addEventListener('click', function () {
+            // Obtener información del producto
+            const quantityElement = document.querySelector('#cant');
+            const sizeElement = document.querySelector('#talle');
+            const priceElement = document.querySelector('#precio');
+            const nameElement = document.querySelector('#name');
+            const imageElement = document.querySelector('img.img-fluid');
 
-        if (priceElement && nameElement && imageElement) {
-            let price = priceElement.textContent;
-            const name = nameElement.textContent;
-            const imageSrc = imageElement.src; // Obtener la ruta de la imagen
+            if (priceElement && nameElement && imageElement) {
+                const quantity = quantityElement ? quantityElement.value : 1;
+                const size = sizeElement ? sizeElement.value : 'M';
+                let price = priceElement.textContent;
+                const name = nameElement.textContent;
+                const imageSrc = imageElement.src;
 
-            price = price.replace('$', '');
-            price = price.replace('.', '');
-            price = parseInt(price);
-            price = price * parseInt(quantity);
+                // Limpiar y convertir precio
+                price = price.replace('$', '');
+                price = price.replace(/\./g, ''); // Remover todos los puntos
+                price = parseInt(price);
+                const totalPrice = price * parseInt(quantity);
 
-            const product = {
-                name: name,
-                price: price,
-                quantity: parseInt(quantity),
-                size: size,
-                image: imageSrc, // Añadir la ruta de la imagen al objeto del producto
-            };
+                const product = {
+                    name: name,
+                    price: totalPrice,
+                    quantity: parseInt(quantity),
+                    size: size,
+                    image: imageSrc,
+                };
 
-            // Añadir producto al carrito
-            cartItems.push(product);
-            localStorage.setItem('cart', JSON.stringify(cartItems));
+                // Añadir producto al carrito usando localStorage
+                const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+                cartItems.push(product);
+                localStorage.setItem('cart', JSON.stringify(cartItems));
 
-            
-        } else {
-            console.error('No se pudo obtener la información del producto.');
-        }
-    });
+                // Actualizar contador del carrito
+                if (typeof actualizarContadorCarrito === 'function') {
+                    actualizarContadorCarrito();
+                }
+
+                // Mostrar notificación si existe
+                if (typeof mostrarNotificacionCarrito === 'function') {
+                    mostrarNotificacionCarrito();
+                }
+
+                console.log('Producto agregado al carrito:', product);
+            } else {
+                console.error('No se pudo obtener la información del producto.');
+            }
+        });
+    }
 });
